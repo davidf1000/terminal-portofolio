@@ -13,7 +13,10 @@ interface TerminalInputProps {
 
 const TerminalInput: React.FC<TerminalInputProps> = ({ value, onChange, onEnter, id, onTabOrRight, suggestion, onUpArrow, onDownArrow }) => {
   // Calculate the part of the suggestion to show (the part after the current input)
-  const suggestionText = suggestion && value && suggestion.startsWith(value) ? suggestion.slice(value.length) : '';
+  const suggestionText =
+    suggestion && value && suggestion.toLowerCase().startsWith(value.toLowerCase())
+      ? suggestion.slice(value.length)
+      : '';
   return (
     <div className="flex-1 relative items-center ml-2">
       <input

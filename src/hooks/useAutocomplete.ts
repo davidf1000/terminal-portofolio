@@ -11,7 +11,7 @@ export function useAutocomplete(commands: string[]) {
     if (timerRef.current) window.clearTimeout(timerRef.current);
     if (val.length >= 2) {
       timerRef.current = window.setTimeout(() => {
-        const match = commands.find(cmd => cmd.startsWith(val));
+        const match = commands.find(cmd => cmd.toLowerCase().startsWith(val.toLowerCase()));
         if (match) {
           setSuggestion(match);
           setShowSuggestion(true);
