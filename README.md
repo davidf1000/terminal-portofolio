@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# David Fauzi Terminal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Website:** [https://davidf1000.github.io/terminal-portofolio/](https://davidf1000.github.io/terminal-portofolio/)
 
-Currently, two official plugins are available:
+## Description
+This is my personal website and portfolio, designed to look and feel like a terminal/command-line interface. My reason for creating this terminal-styled website is because I'm a backend software engineer and a lot of my time is spent on the terminal and as much as i hate it, I'm bad at designing cool looking frontend website. Hence, i want to create a unique experience that allows visitors to interact with the website using terminal commands.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Terminal-based portfolio website**: Interact with my portfolio as if you are in a real terminal.
+- **Responsive design**: Fully tested and usable on both desktop and mobile devices.
+- **Intellisense autocomplete**: Get inline command suggestions and press <kbd>Tab</kbd> or <kbd>Right Arrow</kbd> to accept.
+- **Command history navigation**: Use <kbd>Up</kbd> and <kbd>Down</kbd> arrows to cycle through your previous commands, even after clearing the terminal.
 
-## Expanding the ESLint configuration
+## List of Commands
+| Command      | Description                                                      |
+| ------------ | ---------------------------------------------------------------- |
+| `banner`     | Show the welcome banner.                                         |
+| `help`       | List all available commands and their descriptions.              |
+| `whoami`     | Display information about David Fauzi.                          |
+| `aboutme`    | Show a short biography/about section.                           |
+| `experience` | List work experience and relevant roles.                        |
+| `education`  | Show education background.                                      |
+| `honor`      | Display honors and awards.                                      |
+| `contactme`  | Show contact information and social links.                      |
+| `clear`      | Clear the terminal output (command history navigation persists).|
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
+- **React** (with TypeScript)
+- **Vite**
+- **Tailwind CSS** (for styling)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## How to Run Locally
+1. **Clone the repository:**
+   ```zsh
+   git clone https://github.com/davidf1000/terminal-portofolio.git
+   cd terminal-portofolio
+   ```
+2. **Install dependencies:**
+   ```zsh
+   npm install
+   # or
+   yarn install
+   ```
+3. **Start the development server:**
+   ```zsh
+   npm run dev
+   # or
+   yarn dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser to view the site.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Feel free to explore the commands, try out autocomplete, and navigate the site as you would a real terminal!

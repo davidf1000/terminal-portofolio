@@ -78,7 +78,7 @@ const Terminal: React.FC = () => {
     >
       <div
         ref={scrollRef}
-        className="bg-[#282828] text-[#ebdbb2] rounded-lg w-[97.5%] h-[97.5%] font-mono shadow-lg overflow-y-auto"
+        className="bg-[#282828] text-[#ebdbb2] rounded-lg w-[97.5%] h-[97.5%] font-mono text-[0.55rem] md:text-xl shadow-lg overflow-y-auto"
       >
         <div className="flex flex-col h-auto w-full px-2 py-2">
           <TerminalHistory history={history} outputClassName="whitespace-pre" />
